@@ -15,7 +15,7 @@ const HomeAbout = () => {
   viewport={{ once: true }}>
         <img className='object-cover  rounded-xl shadow-2xl' src={AboutImg} alt="" />
     </motion.div>
-    {/* right image */}
+    {/* right text */}
     <motion.div initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}

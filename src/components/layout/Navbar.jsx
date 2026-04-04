@@ -53,7 +53,7 @@ const Navbar = () => {
                 className={`text-xl capitalize   `}
                 to={item.link}
               >
-                <NavlinkAnimation backgroundColor={"#ede7f6"}>{item.Name}</NavlinkAnimation>
+                <NavlinkAnimation backgroundColor="#ede7f6">{item.Name}</NavlinkAnimation>
               </Link>
             ) : (
           
