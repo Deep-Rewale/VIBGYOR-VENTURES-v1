@@ -7,6 +7,7 @@ import OurEdge from '../components/home/OurEdge'
 import Highlights from '../components/home/Highlights'
 import Portfolio from '../components/home/Portfolio'
 import Brands from '../components/home/Brands'
+import Testmonial from '../components/home/Testmonial'
 
 const Home = () => {
   return (
@@ -18,6 +19,8 @@ const Home = () => {
       <Highlights />
       <Portfolio />
       <Brands />
+      <Testmonial />
+      
     </div>
     
   )
