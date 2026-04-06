@@ -9,7 +9,7 @@ import { div, span } from 'motion/react-client';
 
 const Links = [
   { Name: "Home", link: "/" },
-  { Name: "About", link: null }, //About
+  { Name: "About", link: "/about" }, 
   {
     Name: "Services",
     link: null,
@@ -53,7 +53,7 @@ const Navbar = () => {
                 className={`text-xl capitalize   `}
                 to={item.link}
               >
-                <NavlinkAnimation backgroundColor={"#ede7f6"}>{item.Name}</NavlinkAnimation>
+                <NavlinkAnimation backgroundColor="#ede7f6">{item.Name}</NavlinkAnimation>
               </Link>
             ) : (
           

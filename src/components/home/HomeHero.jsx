@@ -10,7 +10,7 @@ const container = {
   show: {
     transition: {
       staggerChildren: 0.25,
-      delayChildren: 0.2,
+      delayChildren: 0.1,
     },
   },
 };
@@ -43,7 +43,7 @@ const floatUp = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.9,
+      duration: 0.1,
       ease: [0.22, 1, 0.36, 1], // premium easing
     },
   },
@@ -54,7 +54,7 @@ const sectionScale = {
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.4, ease: "easeOut" },
   },
 };
 const HomeHero = () => {
@@ -104,6 +104,7 @@ const HomeHero = () => {
           </motion.div>
           {/* right section */}
           <motion.div variants={container} className="grid grid-cols-2 gap-4">
+            
             <motion.img
               variants={floatUp}
               className="w-full object-cover rounded-lg  "
