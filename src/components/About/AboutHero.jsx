@@ -94,7 +94,7 @@ const AboutHero = () => {
         >
           <img
             loading="lazy"
-            className="h-120 w-120 object-cover rounded-xl shadow-md"
+            className="h-120 w-120 object-cover rounded-lg shadow-md"
             src={Building}
             alt="Company image"
           />

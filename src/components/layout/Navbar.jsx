@@ -14,7 +14,7 @@ const Links = [
     Name: "Services",
     link: null,
     children: [
-      { Name: "Event Management", link: null }, //event-management
+      { Name: "Event Management", link: "/events" }, 
       { Name: "Branding & Advertising", link: null }, //branding&advertising
       { Name: "Corporate Gifting", link:  null}, //corporate-gifting
     ],
