@@ -4,6 +4,8 @@ import MainLayout from './layouts/MainLayout'
 import Home from "./pages/Home"
 import About from  "./pages/About"
 import Event from './pages/Event'
+import BrandAndAds from "./pages/BrandAndAds"
+import CorporateGifting from './pages/CorporateGifting'
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <Route path='/' element={<Home />}/>
       <Route path='/about' element={<About />} />
       <Route path='/events' element={<Event />} />
+      <Route path='/branding&Ad' element={<BrandAndAds />} />
+      <Route path='/corporategifting' element={<CorporateGifting />} />
       </Route>
      </Routes>
     </BrowserRouter>
