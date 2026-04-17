@@ -113,14 +113,14 @@ const BrandSolutions = () => {
           >
             <img
               loading="loading"
-              className="h-100 w-full object-cover rounded-lg"
+              className="h-60 w-full object-cover rounded-lg"
               src={item.image}
               alt={item.title}
             />
             <h2 className="text-xl text-primary-dark font-bold text-center uppercase">
               {item.title}
             </h2>
-            <p className="text-md leading-relaxed text-primary font-semibold text-left ">{item.para}</p>
+            <p className="text-md leading-relaxed text-primary-dark text-left ">{item.para}</p>
           </motion.div>
         ))}
       </motion.div>

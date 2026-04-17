@@ -20,8 +20,8 @@ const Links = [
     ],
   },
    {
-     Name: "Portfolio", link: null
-  }, //portfolio
+     Name: "Portfolio", link: "/portfolio"
+  }, 
   {
      Name: "Contact", link: null
   },  //Contact

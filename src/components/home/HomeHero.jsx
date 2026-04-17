@@ -59,7 +59,7 @@ const sectionScale = {
 };
 const HomeHero = () => {
   return (
-    <section className="bg-gradient-to-br from-[#2d1b7a] via-[#3b2599] to-[#1a1040] px-16 min-h-screen py-30   ">
+    <section className="bg-gradient-to-br from-[#5a4be7] via-[#7b6df2] to-[#c9c3ff] px-16 min-h-screen py-30   ">
       <motion.div
         variants={sectionScale}
         initial="hidden"

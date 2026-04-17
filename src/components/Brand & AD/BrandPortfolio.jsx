@@ -37,7 +37,7 @@ const BrandPortfolio = () => {
                 <div className='grid grid-cols-3 gap-2  '>
                     {images.map((item, index) => (
                         <div key={index} >
-                            <img className='h-80 w-full object-center object-cover rounded-md' src={item.images} alt="Portfolio images" />
+                            <img className='h-60 w-full object-center object-cover rounded-md' src={item.images} alt="Portfolio images" />
                         </div>
                     ))}
                 </div>

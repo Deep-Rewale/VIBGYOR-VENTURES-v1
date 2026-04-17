@@ -108,18 +108,18 @@ const EventSolutions = () => {
           <motion.div
             variants={cardAnim}
             key={index}
-            className=" p-5 shadow-lg bg-white rounded-lg space-y-3 cursor-pointer hover:border-[#e8a020] transition-all duration-300 ease-in-out  origin-center hover:scale-102 hover:shadow-xl hover:shadow-[#e8a020]/30"
+            className=" p-5  shadow-lg bg-white rounded-lg space-y-3 cursor-pointer hover:border-[#e8a020] transition-all duration-300 ease-in-out  origin-center hover:scale-102 hover:shadow-xl hover:shadow-[#e8a020]/30"
           >
             <img
               loading="loading"
-              className="h-100 w-full object-cover rounded-lg"
+              className="h-60 w-full object-cover rounded-lg"
               src={item.image}
               alt={item.title}
             />
             <h2 className="text-xl text-center text-primary-dark font-bold uppercase">
               {item.title}
             </h2>
-            <p className="text-md text-left leading-relaxed text-primary font-semibold">{item.para}</p>
+            <p className="text-md text-left leading-relaxed text-primary-dark">{item.para}</p>
           </motion.div>
         ))}
       </motion.div>

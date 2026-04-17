@@ -27,7 +27,7 @@ const images = [
 
 const Portfolio = () => {
     return (
-        <section className='bg-page py-10 px-16'>
+        <section className=' bg-page py-14 px-16'>
             {/* main content box */}
             <div className='grid grid-cols-2 place-items-center'>
                 {/* left text */}
@@ -46,7 +46,7 @@ const Portfolio = () => {
                 <div className='grid grid-cols-4 gap-2  '>
                     {images.map((item, index) => (
                         <div key={index} className={`${index === 0 || index === 4 || index === 8 ? "col-span-2 " : ""}`}>
-                            <img className='h-80 w-full object-cover rounded-md' src={item.images} alt="Portfolio images" />
+                            <img className='h-50 w-full object-cover rounded-md' src={item.images} alt="Portfolio images" />
                         </div>
                     ))}
                 </div>

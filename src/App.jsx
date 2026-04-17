@@ -6,6 +6,7 @@ import About from  "./pages/About"
 import Event from './pages/Event'
 import BrandAndAds from "./pages/BrandAndAds"
 import CorporateGifting from './pages/CorporateGifting'
+import Portfolio from './pages/Portfolio'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path='/events' element={<Event />} />
       <Route path='/branding&Ad' element={<BrandAndAds />} />
       <Route path='/corporategifting' element={<CorporateGifting />} />
+      <Route path='/portfolio' element={<Portfolio />}  />     
       </Route>
      </Routes>
     </BrowserRouter>
