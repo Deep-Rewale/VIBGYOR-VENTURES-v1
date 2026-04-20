@@ -7,18 +7,24 @@ import Event from './pages/Event'
 import BrandAndAds from "./pages/BrandAndAds"
 import CorporateGifting from './pages/CorporateGifting'
 import Portfolio from './pages/Portfolio'
+import Contact from "./pages/Contact"
+import Login from './components/LoginAndSignUp/Login'
+import SignUp from './components/LoginAndSignUp/SignUp'
 
 const App = () => {
   return (
     <BrowserRouter>
      <Routes>
+      <Route path='/login' element={<Login />} />
+      <Route path='/signUp' element={<SignUp />} />
       <Route element={ <MainLayout />} > 
       <Route path='/' element={<Home />}/>
       <Route path='/about' element={<About />} />
       <Route path='/events' element={<Event />} />
       <Route path='/branding&Ad' element={<BrandAndAds />} />
       <Route path='/corporategifting' element={<CorporateGifting />} />
-      <Route path='/portfolio' element={<Portfolio />}  />     
+      <Route path='/portfolio' element={<Portfolio />}  /> 
+      <Route path='/contact' element={<Contact />}    />
       </Route>
      </Routes>
     </BrowserRouter>

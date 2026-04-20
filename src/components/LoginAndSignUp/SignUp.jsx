@@ -1,0 +1,106 @@
+import React, { useState } from 'react'
+import { SlArrowRight } from "react-icons/sl";
+import SignupImg from "../../assets/loginAndSignup/SignUp/signup.jpg"
+import { Link } from 'react-router-dom';
+
+const SignUp = () => {
+    const [login, setLogin] = useState({
+        email: "",
+        password: "",
+        Confirmpassword: ""
+    })
+
+    // For Status
+    const [status, setStatus] = useState(null);
+    const [loading, setLoading] = useState(null)
+
+    // for handling the changes
+
+    const handleChanges = (event) => {
+        setLogin({
+            ...login,
+            [event.target.name]: event.target.value,
+        });
+    };
+
+    //  validate email
+    const ValidateEmail = (email) => {
+        return /\S+@\S+\.\S+/.test(email);
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (
+            !login.email || login.password
+        ) {
+            setStatus({ type: "error", message: "please fill all  required fields" });
+            setLoading(false)
+            return;
+        }
+
+        if (!ValidateEmail(login.email)) {
+            setStatus({
+                type: "error",
+                message: "Please enter a valid email address",
+            });
+
+            setLoading(false)
+            return;
+        }
+
+        // reset form data
+
+        setLogin({
+            email: "",
+            password: "",
+        });
+
+    }
+
+
+
+
+    return (
+        <section className='min-h-screen bg-gradient-to-br from-[#5a4be7] via-[#7b6df2] to-[#c9c3ff]'>
+            {/* full container */}
+            <div className='grid grid-cols-2'>
+                {/* left image  */}
+                <div className='relative h-screen w-full overflow-hidden'>
+                    <div className='absolute z-10 left-16 top-10 ' ><button className='bg-[#ede7f6]  rounded-2xl cursor-pointer p-3 '><a href="/"><SlArrowRight className='hover:rotate-180 transition-all delay-50' size={30} /></a></button></div>
+                    <div className="text z-10 absolute top-1/2 -translate-y-1/2 left-16">
+                        <h1 className="text-5xl  font-bold text-white mb-4">Create Account</h1>
+                        <p className="text-lg text-gray-300 max-w-md font-semibold">
+                            Join us today and start your journey. Your experience begins with a single step.
+                        </p>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/30 to-black/45"></div>
+                    <img className='h-full w-full  object-cover' loading='lazy' src={SignupImg} alt="Login" />
+                </div>
+
+                {/* right login form */}
+                <div className='flex justify-center items-center text-center flex-col' >
+                    <form className='bg-[#ede7f6] rounded-xl shadow-2xl w-[500px] px-6 py-8 ' action="" onSubmit={handleSubmit}>
+                        <div className='space-y-3'>
+                            <h1 className='text-4xl font-bold text-primary font-heading capitalize'>create account</h1>
+                            <h2 className='text-lg text-primary-dark'>Register with Email </h2></div>
+                        <div className='flex flex-col space-y-5 mt-5'>
+                            <input className='p-4  bg-white outline-none text-lg rounded-xl' type="email" placeholder='Enter E-mail' name='email' value={login.email} onChange={handleChanges} />
+                            <input className='p-4 bg-white outline-none text-lg rounded-xl' type="password" placeholder='Enter password' name='password' value={login.password} onChange={handleChanges} />
+                            <input className='p-4 bg-white outline-none text-lg rounded-xl' type="password" placeholder='Confirm password' name='password' value={login.Confirmpassword} onChange={handleChanges} />
+                        </div>
+                        <div className='space-y-3 mt-5'>
+                            <div className='flex  justify-around text-md text-primary-dark'>
+                                <Link to={"/login"}>Have account? Sign in</Link>
+                            </div>
+                            <button className='bg-primary-dark p-5 text-[#ede7f6] text-lg font-semibold w-full uppercase rounded-xl shadow-md cursor-pointer'>sign up</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default SignUp

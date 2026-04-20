@@ -51,7 +51,7 @@ const Gallary = () => {
             "Lifestyle & Fashion",
             "Talent Engagement",
             "Wedding"].map((cat) => (
-              <motion.button className={`cursor-pointer  rounded-lg text-md shadow-md font-heading  font-semibold py-3 px-5 transistion-all  ${activeCategory === cat ? "bg-primary-dark text-white" : "text-primary-dark bg-gray-100"} `} key={cat} onClick={() => { setActiveCategory(cat); setCurrentPage(1) }} whileHover={{ y: -3 }}
+              <motion.button className={`cursor-pointer  rounded-xl text-md shadow-md font-heading  font-semibold py-3 px-5 transistion-all  ${activeCategory === cat ? "bg-primary-dark text-white" : "text-primary-dark bg-gray-100"} `} key={cat} onClick={() => { setActiveCategory(cat); setCurrentPage(1) }} whileHover={{ y: -3 }}
                 whileTap={{ y: 1 }}
 
                 animate={{

@@ -1,5 +1,5 @@
 import React  from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Logo from "../../assets/Logo/logo.png"
 import NavlinkAnimation from '../Ui/NavlinkAnimation';
 import { Link } from 'react-router-dom';
@@ -23,17 +23,37 @@ const Links = [
      Name: "Portfolio", link: "/portfolio"
   }, 
   {
-     Name: "Contact", link: null
-  },  //Contact
+     Name: "Contact", link: "/contact"
+  },  
 
-  { Name: "Login", link: null }, //login
-//   { Name: "Sign up", link: null }, //signUp
+  { Name: "Login", link: "/login" }, 
+  // { Name: "Sign up", link: "/signUp" },
 ];
 const Navbar = () => {
      const [openDropdown, setOpenDropdown] = useState(null);
+     const [showNav, setShowNav] = useState(true);
+     const [lastScrollY, setLastScrollY] = useState(0); 
+
+
+     useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY) {
+      // scrolling down
+      setShowNav(false);
+    } else {
+      // scrolling up
+      setShowNav(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY]);
 
   return (
-    <nav className="fixed z-[999] w-full px-13 font-heading flex justify-between items-center bg-primary-dark shadow-2xl">
+    <nav className={`fixed z-[999] w-full px-13 font-heading flex justify-between items-center bg-primary-dark shadow-2xl transition-all duration-500 ${showNav ? "top-0" : "-top-24"}`}>
       <div className="left-logo w-60">
         <img src={Logo} alt="Logo" />
       </div>
