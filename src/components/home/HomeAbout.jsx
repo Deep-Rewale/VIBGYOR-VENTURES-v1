@@ -1,5 +1,6 @@
 import React from "react";
 import AboutImg from "../../assets/Home/About/Bhavesh-soni-01.jpg";
+import AboutImg1 from  "../../assets/Home/About/FounderImg.png"
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
 
@@ -7,13 +8,13 @@ const HomeAbout = () => {
   return (
     <section className="bg-page py-10 px-16">
       {/* full container */}
-      <div className="grid grid-cols-2 items-center gap-3 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 items-center gap-15 max-w-6xl mx-auto">
         {/* Left image */}
     <motion.div className='w-full' initial={{ opacity: 0, x: -40 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
   viewport={{ once: true }}>
-        <img className='object-cover  rounded-xl shadow-2xl' src={AboutImg} alt="" />
+        <img className='object-cover  rounded-xl shadow-2xl' src={AboutImg1} alt="" />
     </motion.div>
     {/* right text */}
     <motion.div initial={{ opacity: 0, y: 30 }}

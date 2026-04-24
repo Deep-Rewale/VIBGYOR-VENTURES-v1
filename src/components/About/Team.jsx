@@ -6,47 +6,48 @@ import Team4 from "../../assets/About/Team/Devyani-Chandarana.jpg";
 import Team5 from "../../assets/About/Team/roshan.png";
 import Team6 from "../../assets/About/Team/Shalik-Kesharwani.jpg";
 import Team7 from "../../assets/About/Team/Agnivesh-Zikar.jpg";
+import DummyImg from "../../assets/About/Team/dummyImg.png"
 
 const team = [
   {
     name: "Bhavesh Soni",
     postion: "Director",
-    image: Team1,
+    image: DummyImg,
   },
   {
     name: "Aditya Mehra",
     postion: "Chief Creative Officer (CCO)",
-    image: Team2,
+    image: DummyImg,
   },
   {
     name: "Nisar Shaikh",
     postion: "Head – Events",
-    image: Team3,
+    image: DummyImg,
   },
   {
     name: "Devyani Chandarana",
     postion: "Business Manager – Events",
-    image: Team4,
+    image: DummyImg,
   },
   {
     name: "Roshan Gupta",
     postion: "Head – Digital Marketing",
-    image: Team5,
+    image: DummyImg,
   },
   {
     name: "Shalik Kesharwani",
     postion: "Head – Branding & Advertising",
-    image: Team6,
+    image: DummyImg,
   },
   {
     name: "Agnivesh Zikar",
     postion: "Asst. Head – Event Operations",
-    image: Team7,
+    image: DummyImg,
   },
   {
     name: "Shankar Shit",
     postion: "Project Manager",
-    image: "",
+    image: DummyImg,
   },
 ];
 
