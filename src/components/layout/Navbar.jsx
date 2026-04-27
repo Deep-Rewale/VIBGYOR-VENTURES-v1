@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed z-[999] w-full px-13 font-heading flex justify-between items-center bg-primary-dark shadow-2xl transition-all duration-500 ${showNav ? "top-0" : "-top-24"}`}>
-      <div className="left-logo w-60">
+      <div className="left-logo lg:w-50 xl:w-60">
         <img src={Logo} alt="Logo" />
       </div>
 
@@ -70,14 +70,14 @@ const Navbar = () => {
             {/* top level link */}
             {item.link ? (
               <Link
-                className={`text-xl capitalize   `}
+                className={`lg:text-lg xl:text-xl capitalize   `}
                 to={item.link}
               >
                 <NavlinkAnimation backgroundColor="#ede7f6">{item.Name}</NavlinkAnimation>
               </Link>
             ) : (
           
-              <span className={`text-xl capitalize cursor-pointer `}>
+              <span className={`lg:text-lg xl:text-xl capitalize cursor-pointer `}>
                 <NavlinkAnimation><span className={`${index === 2 ? "flex items-center gap-2" : ""}`}>{item.Name} {index === 2 ? <span className={`${openDropdown === index ? "rotate-180 " : ""} transition-all duration-500 ease-in-out`}><SlArrowDown size={13} /> </span>  : ""}</span></NavlinkAnimation>
               </span>
             )}

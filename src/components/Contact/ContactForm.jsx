@@ -85,29 +85,29 @@ const ContactForm = () => {
 
 
   return (
-    <section className='bg-page py-10 px-16'>
+    <section className='bg-page py-10 px-6 lg:px-16'>
       {/*  full div container */}
-      <div className="full-content grid grid-cols-2 gap-15 items-center">
+      <div className="full-content grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
         {/* left text */}
-        <div className="left-text space-y-5">
-          <h2 className='text-2xl  font-body text-accent font-semibold'>get in touch</h2>
-          <p className='text-5xl font-heading font-semibold text-primary-dark '>We are always ready to help you and answer your questions</p>
-          <div className='grid grid-cols-2 space-y-8'>
+        <div className="left-text space-y-3 lg:space-y-5">
+          <h2 className='text-xl lg:text-2xl  font-body text-accent font-semibold'>get in touch</h2>
+          <p className='text-3xl lg:text-4xl font-heading font-semibold text-primary-dark '>We are always ready to help you and answer your questions</p>
+          <div className='grid grid-cols-1 lg:grid-cols-2 space-y-8'>
             <div>
-              <p className='text-xl font-semibold text-primary-dark'>phone</p>
-              <p className='text-lg '>+91 98213 49716</p>
+              <p className='text-lg lg:text-xl font-semibold text-primary-dark'>phone</p>
+              <p className='text-md lg:text-lg '>+91 98213 49716</p>
             </div>
             <div>
-              <p className='text-xl font-semibold text-primary-dark'>Address</p>
-              <p className='text-lg '>G9,Richa Building, lexi building, New Link Rd, opp. citi Mall, Andheri West, Mumbai, 400053</p>
+              <p className='text-lg lg:text-xl font-semibold text-primary-dark'>Address</p>
+              <p className='text-md lg:text-lg '>G9,Richa Building, lexi building, New Link Rd, opp. citi Mall, Andheri West, Mumbai, 400053</p>
             </div>
             <div>
-              <p className='text-xl font-semibold text-primary-dark'>Email</p>
-              <p className='text-lg '>bhavesh@foresightemg.com</p>
-              <p className='text-lg '>bhavesh@foresightmail.com</p>
+              <p className='text-lg lg:text-xl font-semibold text-primary-dark'>Email</p>
+              <p className='text-md lg:text-lg '>bhavesh@foresightemg.com</p>
+              <p className='text-md lg:text-lg '>bhavesh@foresightmail.com</p>
             </div>
 
-            <div className='text-xl font-semibold text-primary-dark space-y-3'>
+            <div className='text-lg lg:text-xl font-semibold text-primary-dark space-y-3'>
               <p>Social network</p>
               <div className='flex gap-5 '>
                 <a
@@ -146,21 +146,21 @@ const ContactForm = () => {
           </div>
         </div>
         {/* right form  */}
-        <div className="right-form rounded-4xl bg-gray-300  p-15">
+        <div className="right-form rounded-4xl bg-gray-300  p-10 lg:p-15">
           <form action="" onSubmit={handleSubmit}>
             {/*  form title */}
-            <div className='space-y-5'>
-              <h2 className='text-4xl font-semibold text-primary-dark'>Get in Touch</h2>
-              <p className='text-xl font-semibold text-primary-dark'>Define your goals so that we can help as much as we can</p>
+            <div className='space-y-3 lg:space-y-5'>
+              <h2 className='text-3xl lg:text-4xl font-semibold text-primary-dark'>Get in Touch</h2>
+              <p className='text-lg lg:text-xl font-semibold text-primary-dark'>Define your goals so that we can help as much as we can</p>
             </div>
             {/* form inputs  */}
             <div className='flex flex-col space-y-1 mt-2'>
-              <input className='p-5 text-xl border-b border-gray-500 outline-none' type="text" name='name' placeholder='Full name' maxLength={50} onChange={handleChanges} value={formData.name} />
-              <input className='p-5 text-xl border-b border-gray-500 outline-none' type="email" name='email' placeholder='Email' maxLength={50} onChange={handleChanges} value={formData.email} />
-              <input className='p-5 text-xl border-b border-gray-500 outline-none' type="text" name='companyName' placeholder='Company name' maxLength={50} onChange={handleChanges} value={formData.companyName} />
-              <input className='p-5 text-xl border-b border-gray-500 outline-none' type="phone" name='phone' placeholder='Phone' minLength={10} maxLength={10} onChange={handleChanges} value={formData.phone} />
-              <textarea className='p-5 text-xl border-b border-gray-500 outline-none resize-none' type="text" name='message' placeholder='Message'rows="3" maxLength={200} onChange={handleChanges} value={formData.message} />
-              <button className='cursor-pointer rounded-3xl mt-5 flex items-center gap-4 p-5 bg-primary-dark text-lg font-semibold text-gray-200'> <SlArrowRight size={14} /> Send message</button>
+              <input className='p-3 text-lg lg:p-5 lg:text-xl border-b border-gray-500 outline-none' type="text" name='name' placeholder='Full name' maxLength={50} onChange={handleChanges} value={formData.name} />
+              <input className='p-3 text-lg lg:p-5 lg:text-xl border-b border-gray-500 outline-none' type="email" name='email' placeholder='Email' maxLength={50} onChange={handleChanges} value={formData.email} />
+              <input className='p-3 text-lg lg:p-5 lg:text-xl border-b border-gray-500 outline-none' type="text" name='companyName' placeholder='Company name' maxLength={50} onChange={handleChanges} value={formData.companyName} />
+              <input className='p-3 text-lg lg:p-5 lg:text-xl border-b border-gray-500 outline-none' type="phone" name='phone' placeholder='Phone' minLength={10} maxLength={10} onChange={handleChanges} value={formData.phone} />
+              <textarea className='p-3 text-lg lg:p-5 lg:text-xl border-b border-gray-500 outline-none resize-none' type="text" name='message' placeholder='Message'rows="3" maxLength={200} onChange={handleChanges} value={formData.message} />
+              <button className='cursor-pointer rounded-2xl mt-5 flex items-center gap-4 p-5 bg-primary-dark text-md lg:text-lg font-semibold text-gray-200'> <SlArrowRight size={14} /> Send message</button>
             </div>
           </form>
         </div>

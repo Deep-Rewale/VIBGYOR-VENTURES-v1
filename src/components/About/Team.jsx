@@ -53,19 +53,19 @@ const team = [
 
 const Team = () => {
   return (
-    <section className="bg-page px-26 py-10">
+    <section className="bg-page px-6 lg:px-26 py-10">
       {/* title */}
-      <div className="text-center space-y-4">
-        <p className="text-xl font-bold font-body text-accent">
+      <div className="text-center space-y-2 lg:space-y-4">
+        <p className="text-lg lg:text-xl font-bold font-body text-accent">
           Who is behind the scenes
         </p>
-        <h3 className="text-5xl font-semibold font-heading tracking-tight uppercase">
+        <h3 className="text-4xl lg:text-5xl font-semibold font-heading tracking-tight uppercase">
           Core Team
         </h3>
       </div>
 
       {/* team images */}
-      <div className="grid grid-cols-4 gap-10 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
         {team.map((item, index) => (
           <div
             key={index}

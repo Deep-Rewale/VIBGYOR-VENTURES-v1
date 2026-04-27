@@ -54,11 +54,11 @@ const images = [
 ]
 const Brands = () => {
     return (
-        <section className='py-10 px-16 bg-accent'>
+        <section className='py-10 px-6 lg:px-16 bg-accent'>
             {/* title  */}
             <div className='text-center space-y-4'>
-                <p className='text-xl font-bold font-body text-primary uppercase'>Who we work with</p>
-                <h3 className='text-5xl font-semibold text-primary-dark font-heading tracking-tight uppercase'>OUR CLIENTS</h3>
+                <p className='text-lg lg:text-xl font-bold font-body text-primary uppercase'>Who we work with</p>
+                <h3 className='text-4xl lg:text-5xl font-semibold text-primary-dark font-heading tracking-tight uppercase'>OUR CLIENTS</h3>
             </div>
             {/* infinity loop brands images */}
 
@@ -73,7 +73,7 @@ const Brands = () => {
                     }}>
                     {images.map((image, index) => (
                         <div className='h-[140px] w-[200px]   flex-shrink-0 flex items-center justify-center rounded-xl ' key={index}>
-                            <img className='h-[80%] w-auto object-contain  pr-16 ' src={image.img} alt="" />
+                            <img className='h-[60%]  lg:h-[80%] w-auto object-contain  pr-16 ' src={image.img} alt="" />
                         </div>
                     ))}
                 </motion.div>

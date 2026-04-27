@@ -31,39 +31,39 @@ const imageReveal = {
 
 const AboutHero = () => {
   return (
-    <section className="bg-page ">
+    <section className="bg-page  ">
       {/* title div */}
-      <div className="bg-gradient-to-br from-[#2d1b7a] via-[#3b2599] to-[#1a1040] flex items-center justify-center py-20">
-        <h1 className="text-6xl uppercase mt-10 text-[#ede7f6] font-semibold font-heading">
+      <div className="bg-gradient-to-br from-[#2d1b7a] via-[#3b2599] to-[#1a1040] flex items-center justify-center py-10 lg:py-20">
+        <h1 className="text-4xl lg:text-6xl uppercase mt-10 text-[#ede7f6] font-semibold font-heading">
           About Vibgyor
         </h1>
       </div>
 
       {/* content  */}
-      <div className=" grid grid-cols-2 max-w-6xl mx-auto gap-10 py-10 ">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto gap-10 py-10 px-6 ">
         {/* left content */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="space-y-7"
+          className="space-y-4 lg:space-y-7 order-2 "
         >
           <motion.p
             variants={fadeUp}
-            className="text-accent text-xl font-body font-semibold uppercase"
+            className="text-accent text-lg lg:text-xl font-body font-semibold uppercase"
           >
             How we build businesses
           </motion.p>
           <motion.h3
             variants={fadeUp}
-            className="text-primary-dark text-5xl uppercase tracking-tight font-heading font-semibold"
+            className="text-primary-dark text-4xl lg:text-5xl uppercase tracking-tight font-heading font-semibold"
           >
             Get Acquainted
           </motion.h3>
           <motion.p
             variants={fadeUp}
-            className="text-lg text-primary-dark font-body"
+            className="text-md lg:text-lg text-primary-dark font-body"
           >
             We have been able to carve a niche for ourselves making our presence
             strongly felt amongst the multitudes of companies mushrooming in
@@ -71,7 +71,7 @@ const AboutHero = () => {
           </motion.p>
           <motion.p
             variants={fadeUp}
-            className="text-lg text-primary-dark font-body"
+            className="text-md lg:text-lg text-primary-dark font-body"
           >
             Having the foresight in resolving your problem statement with the
             right solutions is important to us. Our customized tools and
@@ -80,7 +80,7 @@ const AboutHero = () => {
           </motion.p>
           <motion.p
             variants={fadeUp}
-            className="text-lg text-primary-dark font-body"
+            className="text-md lg:text-lg text-primary-dark font-body"
           >
             We are flexible, experienced, happy to help & love what we do!
           </motion.p>
@@ -94,7 +94,7 @@ const AboutHero = () => {
         >
           <img
             loading="lazy"
-            className="h-120 w-120 object-cover rounded-lg shadow-md"
+            className="h-120 w-120 object-cover rounded-lg shadow-md max-lg:w-full"
             src={Building}
             alt="Company image"
           />

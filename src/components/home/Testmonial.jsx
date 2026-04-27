@@ -44,13 +44,13 @@ const testmonials = [
 
 const Testmonial = () => {
   return (
-    <section className="bg-page py-10">
+    <section className="bg-page py-5 lg:py-10">
       {/* title */}
       <div className="text-center space-y-4 ">
-        <p className="text-xl font-bold font-body text-accent uppercase">
+        <p className="text-lg lg:text-xl font-bold font-body text-accent uppercase">
           what they say
         </p>
-        <h3 className="text-5xl font-semibold text-primary-dark font-heading tracking-tight uppercase">
+        <h3 className="text-4xl lg:text-5xl font-semibold text-primary-dark font-heading tracking-tight uppercase">
           our Testimonials
         </h3>
       </div>
@@ -67,8 +67,8 @@ const Testmonial = () => {
         >
           {testmonials.map((item, index) => (
             <div className=" flex flex-col flex-shrink-0  w-[470px]  cursor-pointer ">
-              <div className="shadow-xl rounded-xl bg-white p-6 h-60 relative">
-                <p className="whitespace-normal text-lg font-body text-primary-dark ">
+              <div className="shadow-xl rounded-xl bg-white p-6 h-50 lg:h-60 relative">
+                <p className="whitespace-normal text-md lg:text-lg font-body text-primary-dark ">
                   {item.review}
                 </p>
                 <div className="flex gap-1 absolute bottom-4 text-accent">
@@ -96,7 +96,7 @@ const Testmonial = () => {
                   src={item.image}
                   alt={item.name}
                 />
-                <h3 className="text-lg font-semibold  text-primary-dark">
+                <h3 className="text-md lg:text-lg font-semibold  text-primary-dark">
                   {item.name}
                 </h3>
               </div>
@@ -115,8 +115,8 @@ const Testmonial = () => {
         >
           {testmonials.map((item, index) => (
             <div className=" flex flex-col flex-shrink-0  w-[470px]  cursor-pointer ">
-              <div className="shadow-xl rounded-xl bg-white p-6 h-60 relative">
-                <p className="whitespace-normal text-lg font-body text-primary-dark ">
+              <div className="shadow-xl rounded-xl bg-white p-6 h-50  lg:h-60 relative">
+                <p className="whitespace-normal text-md lg:text-lg font-body text-primary-dark ">
                   {item.review}
                 </p>
                 <div className="flex gap-1 absolute bottom-4 text-accent">
@@ -144,7 +144,7 @@ const Testmonial = () => {
                   src={item.image}
                   alt={item.name}
                 />
-                <h3 className="text-lg font-semibold  text-primary-dark">
+                <h3 className="text-md lg:text-lg font-semibold  text-primary-dark">
                   {item.name}
                 </h3>
               </div>

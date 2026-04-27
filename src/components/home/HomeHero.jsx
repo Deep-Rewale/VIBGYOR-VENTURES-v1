@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 import Img1 from "../../assets/Home/Hero/events.jpg";
 import Img2 from "../../assets/Home/Hero/ads-branding.avif";
 import Img3 from "../../assets/Home/Hero/corporate-gifts.webp";
@@ -71,35 +72,36 @@ const HomeHero = () => {
           className="grid grid-cols-1  lg:grid-cols-2 gap-5 items-center"
         >
           {/* left section */}
-          <motion.div className="text-[#ede7f6] space-y-6">
+          <motion.div className="text-[#ede7f6] space-y-4 xl:space-y-6">
             <motion.p
               variants={blurReveal}
-              className="font-body text-xl text-accent"
+              className="font-body text-lg xl:text-xl text-accent"
             >
               Creative Solutions
             </motion.p>
             <motion.h1
               variants={blurReveal}
-              className="text-5xl font-semibold font-heading max-w-xl"
+              className=" text-5xl font-semibold font-heading max-w-xl"
             >
               Elevate Your Brand With Powerful Experiences
             </motion.h1>
             <motion.p
               variants={blurReveal}
-              className="font-body text-lg max-w-xl"
+              className="font-body  xl:text-lg max-w-xl"
             >
               From seamless event management to impactful branding & advertising
               and premium corporate gifting - we help businesses create lasting
               impressions and meaningful connections.
             </motion.p>
             <motion.div variants={blurReveal} className="origin-center">
-              <Button
+                <Button
                 text={"Explore Services"}
                 paddingX="py-2"
                 paddingY="px-8"
                 textSize={"text-xl"}
                 hoverText={"text-[#ede7f6]"}
-              />
+                Redirect={"/events"}
+                 />
             </motion.div>
           </motion.div>
           {/* right section */}

@@ -40,10 +40,10 @@ const Gallary = () => {
   const totalPages = Math.ceil(filterdImages.length / imagePerPage);
 
   return (
-    <section className='py-10 px-16 bg-page'>
+    <section className='py-10 px-6 lg:px-16 bg-page'>
       <div className='space-y-8'>
         {/* catagory buttons */}
-        <div className='flex gap-5 justify-end'>
+        <div className='flex max-lg:flex-wrap gap-3 lg:gap-5 justify-center lg:justify-end'>
           {["All",
             "Celebrity Engagements",
             "Corporate Events",
@@ -51,7 +51,7 @@ const Gallary = () => {
             "Lifestyle & Fashion",
             "Talent Engagement",
             "Wedding"].map((cat) => (
-              <motion.button className={`cursor-pointer  rounded-xl text-md shadow-md font-heading  font-semibold py-3 px-5 transistion-all  ${activeCategory === cat ? "bg-primary-dark text-white" : "text-primary-dark bg-gray-100"} `} key={cat} onClick={() => { setActiveCategory(cat); setCurrentPage(1) }} whileHover={{ y: -3 }}
+              <motion.button className={`cursor-pointer  rounded-xl text-sm lg:text-md shadow-md font-heading  font-semibold  py-3 px-5 transistion-all  ${activeCategory === cat ? "bg-primary-dark text-white" : "text-primary-dark bg-gray-100"} `} key={cat} onClick={() => { setActiveCategory(cat); setCurrentPage(1) }} whileHover={{ y: -3 }}
                 whileTap={{ y: 1 }}
 
                 animate={{
@@ -71,7 +71,7 @@ const Gallary = () => {
         {/*  showing image accoding to catogory */}
         <AnimatePresence mode="wait">
           key={activeCategory + currentPage}
-          <div className='grid grid-cols-3 gap-5'>
+          <div className='grid  max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-3 gap-5'>
             {currentImage.map((item, index) => (
               <motion.img
 
@@ -93,7 +93,7 @@ const Gallary = () => {
 
 
         {/* pagination button */}
-        <div className='flex gap-3 justify-center'>
+        <div className='flex flex-wrap gap-3 justify-center'>
           {[...Array(totalPages)].map((_, index) => (
             <button
               key={index} onClick={() => setCurrentPage(index + 1)} className={`shadow-md font-semibold text-lg py-1 px-3 rounded-md cursor-pointer ${currentPage === index + 1 ? "bg-primary-dark text-white" : "text-primary-dark bg-gray-100"}`}>

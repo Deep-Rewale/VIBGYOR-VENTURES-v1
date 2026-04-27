@@ -18,25 +18,25 @@ const images = [
 
 const BrandPortfolio = () => {
     return (
-        <section className='bg-page py-10 px-16'>
+        <section className='bg-page py-10 px-6 lg:px-16'>
             {/* main content box */}
-            <div className='grid grid-cols-2 place-items-center'>
+            <div className='grid grid-cols-1 gap-10 lg:grid-cols-2 lg:place-items-center'>
                 {/* left text */}
-                <div className='space-y-6'>
-                    <p className='text-xl font-bold text-accent font-body'>WHY BELIEVE US</p>
-                    <h3 className='text-5xl uppercase font-heading tracking-tight text-primary-dark font-semibold' >Our Portfolio</h3>
+                <div className='space-y-4 lg:space-y-6  order-2'>
+                    <p className='text-lg lg:text-xl font-bold text-accent font-body'>WHY BELIEVE US</p>
+                    <h3 className='text-4xl lg:text-5xl uppercase font-heading tracking-tight text-primary-dark font-semibold' >Our Portfolio</h3>
 
-                    <p className='max-w-xl font-body text-lg text-primary-dark'>We take pride in delivering impactful experiences through event management, branding, and corporate gifting solutions. Each project reflects our commitment to creativity, precision, and client satisfaction, ensuring every detail aligns with the brand’s vision.</p>
-                    <p className='max-w-xl font-body text-lg text-primary-dark'>From managing large-scale events to crafting compelling brand identities and premium gifting solutions, our portfolio showcases a diverse range of successful collaborations that leave a lasting impression.</p>
+                    <p className='w-full lg:max-w-xl font-body text-md lg:text-lg text-primary-dark'>We take pride in delivering impactful experiences through event management, branding, and corporate gifting solutions. Each project reflects our commitment to creativity, precision, and client satisfaction, ensuring every detail aligns with the brand’s vision.</p>
+                    <p className='w-full lg:max-w-xl font-body text-md lg:text-lg text-primary-dark'>From managing large-scale events to crafting compelling brand identities and premium gifting solutions, our portfolio showcases a diverse range of successful collaborations that leave a lasting impression.</p>
                     <div>
-                        <Button text={"VIEW PORTFOLIO"} paddingX="px-7" paddingY="py-2" hoverText={"text-primary-dark"} textSize={"text-lg"} />
+                        <Button text={"VIEW PORTFOLIO"} paddingX="px-7" paddingY="py-2" hoverText={"text-primary-dark"} textSize={"text-md lg:text-lg"} Redirect={"/portfolio"} />
                     </div>
                 </div>
 
                 {/* right images */}
-                <div className='grid grid-cols-3 gap-2  '>
+                <div className='grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-3 gap-2 '>
                     {images.map((item, index) => (
-                        <div key={index} >
+                        <div key={index}  >
                             <img className='h-60 w-full object-center object-cover rounded-md' src={item.images} alt="Portfolio images" />
                         </div>
                     ))}

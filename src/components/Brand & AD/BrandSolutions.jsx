@@ -73,24 +73,24 @@ const Solutions = [
 
 const BrandSolutions = () => {
   return (
-     <section className="bg-page py-10 px-16">
+     <section className="bg-page py-10 lg:px-16 px-6">
       {/* title */}
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         variants={container}
-        className="text-center space-y-4"
+        className="text-center space-y-2 lg:space-y-4"
       >
         <motion.p
           variants={fadeUp}
-          className="text-xl font-bold font-body text-accent uppercase"
+          className="text-lg lg:text-xl font-bold font-body text-accent uppercase"
         >
           How do we Support Your Brand
         </motion.p>
         <motion.h3
           variants={fadeUp}
-          className="text-5xl font-semibold font-heading tracking-tight uppercase"
+          className="text-4xl lg:text-5xl font-semibold font-heading tracking-tight uppercase"
         >
           Solutions we offer
         </motion.h3>
@@ -102,14 +102,14 @@ const BrandSolutions = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-3 gap-7 mt-10"
+        className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-7 lg:mt-10"
       >
         {/* main cards */}
         {Solutions.map((item, index) => (
           <motion.div
             variants={cardAnim}
             key={index}
-            className=" p-3 shadow-lg bg-white rounded-lg space-y-3 cursor-pointer hover:border-[#e8a020] transition-all duration-300 ease-in-out  origin-center hover:scale-102 hover:shadow-xl hover:shadow-[#e8a020]/30"
+            className=" p-2 lg:p-3 shadow-lg bg-white rounded-lg space-y-2 lg:space-y-3 cursor-pointer hover:border-[#e8a020] transition-all duration-300 ease-in-out  origin-center hover:scale-102 hover:shadow-xl hover:shadow-[#e8a020]/30"
           >
             <img
               loading="loading"
@@ -117,10 +117,10 @@ const BrandSolutions = () => {
               src={item.image}
               alt={item.title}
             />
-            <h2 className="text-xl text-primary-dark font-bold text-center uppercase">
+            <h2 className="text-lg lg:text-xl text-primary-dark font-bold text-center uppercase">
               {item.title}
             </h2>
-            <p className="text-md leading-relaxed text-primary-dark text-left ">{item.para}</p>
+            <p className="max-lg:px-3 text-md leading-relaxed text-primary-dark text-left ">{item.para}</p>
           </motion.div>
         ))}
       </motion.div>

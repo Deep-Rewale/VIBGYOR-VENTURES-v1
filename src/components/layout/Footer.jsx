@@ -10,7 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <section className="bg-primary-dark  ">
+    <section className="bg-primary-dark overflow-x-hidden ">
       {/* main content div */}
       <div className="text-[#ede7f6] flex justify-around font-body  py-10 px-16">
         {/* 1 col */}
