@@ -10,6 +10,8 @@ import Portfolio from './pages/Portfolio'
 import Contact from "./pages/Contact"
 import Login from './components/LoginAndSignUp/Login'
 import SignUp from './components/LoginAndSignUp/SignUp'
+import Products from './pages/Products'
+import ProductDetails from './components/Products/ProductDetails'
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
       <Route path='/corporategifting' element={<CorporateGifting />} />
       <Route path='/portfolio' element={<Portfolio />}  /> 
       <Route path='/contact' element={<Contact />}    />
+      <Route path='/products' element={<Products />} />
+       <Route path='/products/:id' element={<ProductDetails />} />
       </Route>
      </Routes>
     </BrowserRouter>

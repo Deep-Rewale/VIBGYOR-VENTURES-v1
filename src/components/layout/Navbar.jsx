@@ -20,6 +20,9 @@ const Links = [
     ],
   },
    {
+     Name: "Products", link: "/products"
+  },
+   {
      Name: "Portfolio", link: "/portfolio"
   }, 
   {
@@ -62,7 +65,7 @@ const Navbar = () => {
         {Links.map((item, index) => (
           <div
             key={index}
-            className={`relative  text-[#ede7f6] ${index === 5 && "ml-32"} ${index === 5 ? 'py-2 px-8 border bg-accent font-semibold text-black  border-[#e8a020] rounded-md  cursor-pointer hover:border-[#ede7f6] hover:bg-transparent hover:text-[#ede7f6]   transition-all duration-300 ease-in-out': ""} `}
+            className={`relative  text-[#ede7f6] ${index === 6 && "ml-32"} ${index === 6 ? 'py-2 px-8 border bg-accent font-semibold text-black  border-[#e8a020] rounded-md  cursor-pointer hover:border-[#ede7f6] hover:bg-transparent hover:text-[#ede7f6]   transition-all duration-300 ease-in-out': ""} `}
             
             onMouseEnter={() => item.children && setOpenDropdown(index)}
             onMouseLeave={() => setOpenDropdown(null)}
