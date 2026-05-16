@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import LoginImg from "../../assets/loginAndSignup/Login/login.jpg"
 import { SlArrowRight } from "react-icons/sl";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 
 const Login = () => {
+    const navigate = useNavigate();
+    const { login: authLogin } = useAuth();
 
     const [login, setLogin] = useState({
         email: "",
@@ -13,7 +16,7 @@ const Login = () => {
 
     // For Status
     const [status, setStatus] = useState(null);
-    const [loading, setLoading] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     // for handling the changes
 
@@ -31,11 +34,11 @@ const Login = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true);
+        setStatus(null);
 
-        if (
-            !login.email || login.password
-        ) {
-            setStatus({ type: "error", message: "please fill all  required fields" });
+        if (!login.email || !login.password) {
+            setStatus({ type: "error", message: "Please fill all required fields" });
             setLoading(false)
             return;
         }
@@ -45,18 +48,18 @@ const Login = () => {
                 type: "error",
                 message: "Please enter a valid email address",
             });
-
             setLoading(false)
             return;
         }
 
-        // reset form data
-
-        setLogin({
-            email: "",
-            password: "",
-        });
-
+        const result = authLogin(login.email, login.password);
+        
+        if (result.success) {
+            navigate('/');
+        } else {
+            setStatus({ type: "error", message: result.message });
+            setLoading(false);
+        }
     }
 
 
@@ -87,7 +90,13 @@ const Login = () => {
                     <form className='bg-[#ede7f6] rounded-xl shadow-2xl max-sm:w-[340px] max-lg:w-[580px] lg:w-[500px] px-6 py-8 ' action="" onSubmit={handleSubmit}>
                         <div className='space-y-3'>
                             <h1 className='text-3xl lg:text-4xl font-bold text-primary font-heading capitalize'>sign in</h1>
-                            <h2 className='text-md lg:text-lg text-primary-dark'>Sign in with Email & Password</h2></div>
+                            <h2 className='text-md lg:text-lg text-primary-dark'>Sign in with Email & Password</h2>
+                            {status && (
+                                <div className={`p-2 rounded text-sm ${status.type === 'error' ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'}`}>
+                                    {status.message}
+                                </div>
+                            )}
+                        </div>
                         <div className='flex flex-col space-y-3 lg:space-y-5 mt-5'>
                             <input className='p-3 lg:p-4  bg-white outline-none text-md lg:text-lg rounded-xl' type="email" placeholder='Enter E-mail' name='email' value={login.email} onChange={handleChanges} />
                             <input className='p-3 lg:p-4 bg-white outline-none text-md lg:text-lg rounded-xl' type="password" placeholder='Enter password' name='password' value={login.password} onChange={handleChanges} />
